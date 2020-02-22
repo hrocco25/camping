@@ -1,0 +1,43 @@
+{% extends 'camp/base.html' %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+    <h1>New Campsite</h1>
+ 
+    <form method="POST" enctype='multipart/form-data' novalidate>
+        {% csrf_token %}
+        <div class="col-lg">
+            <div class="row">
+                <div class="col-6">
+                    {{ form.name|as_crispy_field }}
+                </div>
+                <div class="col-6">
+                    {{ form.road|as_crispy_field }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    {{ form.location|as_crispy_field }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    {{ form.number_of_campsites|as_crispy_field }}
+                </div>
+                <div class="col-6">
+                    {{ form.number_of_days|as_crispy_field }}
+                </div>
+            </div>
+            
+            {{ form.description|as_crispy_field }}
+           
+            <div>
+                {{ form.image|as_crispy_field }}
+            </div>
+            
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'camp/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div>
+    <div class="row text-center">
+        <div class= "col-6">
+            <h2>Find a campsite</h2>
+            <form action='{%url "search:search_result"%}' method='get'>
+                {%csrf_token%}
+                <input type='search' placeholder='search' name='q' />
+            </form>   
+        </div>
+        <div class="col-6">
+            <h3><a href="{% url 'camp_create' %}">Add a Campsite </a></h3>
+        </div> 
+       
+    </div>
+    {% for camp in camps %}
+    <a href="{% url 'camp_detail' pk=camp.pk %}"><h2>{{ camp.name }}</h2></a> <p>{{ camp.location }}</p>
+    {% endfor %}
+
+</div>
+
+
+{% endblock %}

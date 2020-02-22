@@ -1,0 +1,28 @@
+{% extends 'camp/base.html' %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+ 
+    <h1>New Review</h1>
+ 
+    <form method="POST" novalidate>
+        {% csrf_token %}
+        <div class="col-lg">
+            <div class="row">
+                <div class="col-6">
+                    {{ form.title|as_crispy_field }}
+                </div>
+                <div class="col-6">
+                    {{ form.author|as_crispy_field}}
+                </div>
+                <div class="col-12">
+                    {{ form.content|as_crispy_field }}    
+                </div>
+                
+            </div>
+            <button type="submit">Submit</button>
+        </div>
+       
+       
+    </form>
+{% endblock %}

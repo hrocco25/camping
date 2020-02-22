@@ -1,0 +1,27 @@
+{% extends 'camp/base.html' %}
+<!-- {% load static %} -->
+{% block content %}
+
+<div>
+    <h1>{{ camp.name }}</h1>
+    <p>Location: {{ camp.location }}</p>
+    <p>Description: {{ camp.description }} </p>
+    <p>Number of days: {{ camp.num_day }}</p>
+    <p>Number of camping spots: {{ camp.num_spots }}</p>
+    <p>Road condition: {{ camp.road }}</p>
+    {% if camp.image %}
+        <img src="{{ camp.image.url }}" alt="{{ camp.name }}" width="30%">
+    {% endif %}
+    <h3><a href="{% url 'review_create' pk=camp.pk %}">Add a Review</a></h3>
+    <h4>Reviews</h4>
+    <ul>
+        {% for review in camp.reviews.all %}
+            <li> 
+                <h3>Title: {{ review.title }}</h3> 
+                <p>{{ review.content }}- {{ review.author }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}
