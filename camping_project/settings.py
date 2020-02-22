@@ -46,7 +46,9 @@ INSTALLED_APPS = [
 
     'camping',
     'search',
-    'crispy_forms'
+    'crispy_forms',
+    'storages',
+    
 ]
 
 CRISPY_TEMPLATE_PACK= 'bootstrap4'
@@ -162,3 +164,11 @@ STATICFILES_DIRS = (
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static' 'media')
+
+
+AWS_ACCESS_KEY_ID = ACCESS_KEY
+AWS_SECRET_KEY_ID = SECRET_KEY
+AWS_STORAGE_BUCKET_NAME= BUCKET_NAME
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_SOTRAGE= 'storages.backend.s3boto3.S3Boto3Storage'
