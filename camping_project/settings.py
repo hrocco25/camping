@@ -25,7 +25,11 @@ SECRET_KEY = '419x+v9+=tl8!db8c&d8ap747yb2igv3^j4-dkt$xdrlisa3f='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1',
+'dispersed-camping.herokuapp.com'
+]
 
 
 # Application definition
