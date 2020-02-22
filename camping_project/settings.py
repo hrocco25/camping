@@ -91,16 +91,27 @@ WSGI_APPLICATION = 'camping_project.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'camping_db',
+#         'USER': 'camp',
+#         'PASSWORD': 'camppassword',
+#         'HOST': 'localhost'
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'camping_db',
-        'USER': 'camp',
-        'PASSWORD': 'camppassword',
-        'HOST': 'localhost'
+        'NAME': 'daf38uqqs898ja',
+        'USER': 'kafumuczxehwvx',
+        'PASSWORD': '16b78aa1e41156f33a7a7006963d11d18d8d751b061dbdd3493c3e433b241d38',
+        'HOST': 'ec2-3-231-46-238.compute-1.amazonaws.com'
     }
 }
 
+# postgres://kafumuczxehwvx:16b78aa1e41156f33a7a7006963d11d18d8d751b061dbdd3493c3e433b241d38@ec2-3-231-46-238.compute-1.amazonaws.com:5432/daf38uqqs898ja
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
