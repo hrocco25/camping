@@ -1,6 +1,3 @@
-access= 'AKIAWUNESWIFOLDRFZWZ'
-secret= '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'
+access= 'AKIAWUNESWIFCGKZESMO'
+secret= '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'
 
-[default]
-aws_access_key = 'AKIAWUNESWIFOLDRFZWZ'
-aws_secret_key = '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'
