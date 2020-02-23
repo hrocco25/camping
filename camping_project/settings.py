@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
-from keys import ACCESS_KEY, SECRET_KEY, BUCKET_NAME
+from keys import access, secret
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -27,7 +27,7 @@ SECRET_KEY = '419x+v9+=tl8!db8c&d8ap747yb2igv3^j4-dkt$xdrlisa3f='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = []
+
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1',
 'dispersed-camping.herokuapp.com'
@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'search',
     'crispy_forms',
     'storages',
+    'boto3'
     
 ]
 
@@ -168,9 +169,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static' 'media')
 
 # s3 bucket
 
-AWS_ACCESS_KEY_ID = ACCESS_KEY
-AWS_SECRET_KEY_ID = SECRET_KEY
-AWS_STORAGE_BUCKET_NAME= BUCKET_NAME
+AWS_ACCESS_KEY_ID = access
+AWS_SECRET_KEY_ID = secret
+AWS_STORAGE_BUCKET_NAME= 
 
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
