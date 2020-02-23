@@ -12,10 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
-from keys import access, secret
-
-
-
+from keys import ACCESS_KEY, SECRET_KEY, BUCKET_NAME
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -51,9 +48,7 @@ INSTALLED_APPS = [
     'search',
     'crispy_forms',
     'storages',
-    'boto3',
-
-   
+    
 ]
 
 CRISPY_TEMPLATE_PACK= 'bootstrap4'
@@ -171,15 +166,14 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static' 'media')
 
 
+# s3 bucket
 
-AWS_ACCESS_KEY_ID= access
-AWS_SECRET_ACCESS_KEY= secret
-
-
-AWS_STORAGE_BUCKET_NAME= 'camp-free'
+AWS_ACCESS_KEY_ID = ACCESS_KEY
+AWS_SECRET_KEY_ID = SECRET_KEY
+AWS_STORAGE_BUCKET_NAME= BUCKET_NAME
 
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 
-DEFAULT_FILE_STORAGE= 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+DEFAULT_FILE_STORAGE= 'storages.backend.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backend.s3boto3.S3Boto3Storage'

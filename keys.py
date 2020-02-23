@@ -1,3 +1,4 @@
-access= 'AKIAWUNESWIFGLVYYR7C'
-secret= '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'
+
+access= 
+secret= 
 
