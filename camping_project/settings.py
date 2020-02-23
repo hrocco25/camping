@@ -22,7 +22,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '419x+v9+=tl8!db8c&d8ap747yb2igv3^j4-dkt$xdrlisa3f='
+SECRET_KEY = get_env_variable('SECRET_KEY')
+
+
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -150,6 +153,14 @@ USE_L10N = True
 
 USE_TZ = True
 
+ACCESS = False
+
+
+
+if ENV_ROLE == "development": 
+    ACCESS= get_env_variable('access')
+   
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
@@ -169,8 +180,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static' 'media')
 
 # s3 bucket
 
-AWS_ACCESS_KEY_ID = access
-AWS_SECRET_ACCESS_KEY = secret
+AWS_ACCESS_KEY_ID = ACCESS
+AWS_SECRET_ACCESS_KEY = SECRET_KEY
 
 AWS_STORAGE_BUCKET_NAME= 'camp-free'
 
