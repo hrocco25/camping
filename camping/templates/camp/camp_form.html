@@ -21,6 +21,9 @@
                 <div class="col-6">
                     {{ form.location|as_crispy_field }}
                 </div>
+                <div class="col-6">
+                    {{ form.image|as_crispy_field }}
+                </div>
             </div>
             <div class="row">
                 <div class="col-6">
@@ -33,9 +36,7 @@
             
             {{ form.description|as_crispy_field }}
            
-            <div>
-                {{ form.image|as_crispy_field }}
-            </div>
+        
             
             <button type="submit">Submit</button>
         </div>
