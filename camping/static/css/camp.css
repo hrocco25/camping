@@ -1,5 +1,5 @@
 body {
-    background-color: pink !important;
+    background-color: #F7C2BA!important;
     margin: 5% !important;
 }
 
@@ -31,6 +31,13 @@ a{
 .search{
     margin: 5%;
     text-align: center;
+    
+}
+
+.search a{
+    font-size: 1.6em;
+    border: solid .1em black;
+
 }
 
 .camps{
@@ -43,9 +50,8 @@ a{
     border: black solid .2em;
 }
 
-.camps:hover{
-    color:purple;
-}
+
+
 
 /* ###############
 #detail */
@@ -53,6 +59,8 @@ a{
 .detail{
     margin-bottom: 2%;
     border-bottom: black .2em solid;
+    text-align: center;
+   
 }
 
 .reviewHeader{
@@ -60,7 +68,31 @@ a{
     justify-content: space-between;
 }
 
+.detailHead img{
+    width: 30%;
+    margin-bottom: 2%;
+    border: black .1em solid;
+}
+
 .reviewHeader a{
     border: black solid .1em;
    
+}
+
+
+
+.reviewHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* search app */
+.searchResult{
+    text-align: center;
+}
+
+.searchResult h2{
+    border-bottom: black solid .1em;
+    margin-bottom: 2%;
 }

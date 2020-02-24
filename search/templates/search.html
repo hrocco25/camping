@@ -1,17 +1,14 @@
 {%extends 'camp/base.html'%}
+
 {% block content%}
 
-<div>
-    <p>You have search for <b>"{{query}}"</b></p>
-    <!-- <form method='GET'>
-        {%csrf_token%}
-        <input type='search' placeholder='search' name='q' />
-    </form> -->
-    <ul>
-        {% for camp in camps %}
-            <li> <a href="{% url 'camp_detail' pk=camp.pk %}"><h2>{{ camp.name }}</h2></a> <p>{{ camp.location }}</p>       </li>
-        {% endfor %}
-    </ul>
+<div class="searchResult">
+    <h2>You have search for <b>"{{query}}"</b></h2>
+  
+    {% for camp in camps %}
+        <a href="{% url 'camp_detail' pk=camp.pk %}"><h3>{{ camp.name }}</h3></a> <p>{{ camp.location }}</p>
+    {% endfor %}
+    
 </div>
 
 {%endblock%}
