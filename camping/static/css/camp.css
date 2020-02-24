@@ -1,3 +1,66 @@
 body {
     background-color: pink !important;
+    margin: 5% !important;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 3%;;
+}
+
+a{
+    color: black !important;
+}
+
+
+
+.camps h2{
+    font-size: 1.5em;
+    color: black;
+}
+
+
+.searchAdd{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;  
+  }
+
+.search{
+    margin: 5%;
+    text-align: center;
+}
+
+.camps{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3%;
+    padding: 2%;
+    text-align: center;
+    border: black solid .2em;
+}
+
+.camps:hover{
+    color:purple;
+}
+
+/* ###############
+#detail */
+
+.detail{
+    margin-bottom: 2%;
+    border-bottom: black .2em solid;
+}
+
+.reviewHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+.reviewHeader a{
+    border: black solid .1em;
+   
 }

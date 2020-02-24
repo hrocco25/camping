@@ -1,27 +1,36 @@
 {% extends 'camp/base.html' %}
-
 {% block content %}
 
 <div>
-    <h1>{{ camp.name }}</h1>
-    <p>Location: {{ camp.location }}</p>
-    <p>Description: {{ camp.description }} </p>
-    <p>Number of days: {{ camp.num_day }}</p>
-    <p>Number of camping spots: {{ camp.num_spots }}</p>
-    <p>Road condition: {{ camp.road }}</p>
-    {% if camp.image %}
-        <img src="{{ camp.image.url }}" alt="{{ camp.name }}" width="30%">
-    {% endif %}
-    <h3><a href="{% url 'review_create' pk=camp.pk %}">Add a Review</a></h3>
-    <h4>Reviews</h4>
-    <ul>
-        {% for review in camp.reviews.all %}
-            <li> 
-                <h3>{{ review.title }}</h3> 
-                <p>{{ review.content }}- {{ review.author }}</p>
-            </li>
-        {% endfor %}
-    </ul>
+    <div class="detail">
+        <div class="detailHead">
+            <h1>{{ camp.name }}</h1>
+            <p>Location: {{ camp.location }}</p>
+            {% if camp.image %}
+                <img src="{{ camp.image.url }}" alt="{{ camp.name }}" width="30%">
+            {% endif %}
+        </div>
+        <div class="detailBody">
+            <p>{{ camp.description }} </p>
+            <p>Number of days: {{ camp.number_of_days }}</p>
+            <p>Number of camping spots: {{ camp.number_of_campsites }}</p>
+            <p>Road condition: {{ camp.road }}</p>
+        </div>
+    </div>
+    <div class="reviews">
+        <div class="reviewHeader">
+            <h2>Reviews</h2> 
+            <h2><a href="{% url 'review_create' pk=camp.pk %}">Add a Review</a></h2>
+        </div>
+        <ul>
+            {% for review in camp.reviews.all %}
+                <li> 
+                    <h3>{{ review.title }}</h3> 
+                    <p>{{ review.content }}- {{ review.author }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>
 
 {% endblock %}
