@@ -180,8 +180,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static' 'media')
 
 # s3 bucket
 
-AWS_ACCESS_KEY_ID = access
-AWS_SECRET_ACCESS_KEY = secret
+AWS_ACCESS_KEY_ID = ACCESS
+AWS_SECRET_ACCESS_KEY = KEY
 
 AWS_STORAGE_BUCKET_NAME= 'camp-free'
 
