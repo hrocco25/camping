@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+ACCESS = os.environ['ACCESS']
+KEY = os.environ['KEY']
 
 
 
@@ -180,8 +182,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static' 'media')
 
 # s3 bucket
 
-AWS_ACCESS_KEY_ID = get_env_variable(ACCESS)
-AWS_SECRET_ACCESS_KEY = get_env_variable(KEY)
+AWS_ACCESS_KEY_ID = ACCESS
+AWS_SECRET_ACCESS_KEY = KEY
 
 AWS_STORAGE_BUCKET_NAME= 'camp-free'
 
