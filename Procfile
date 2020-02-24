@@ -1,1 +1,1 @@
-web: gunicorn --log-file - camping_project.wsgi 
+web: gunicorn camping_project.wsgi --log-file -
