@@ -17,7 +17,7 @@
     <ul>
         {% for review in camp.reviews.all %}
             <li> 
-                <h3>Title: {{ review.title }}</h3> 
+                <h3>{{ review.title }}</h3> 
                 <p>{{ review.content }}- {{ review.author }}</p>
             </li>
         {% endfor %}

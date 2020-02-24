@@ -11,6 +11,11 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+
+# local
+# from key import ACCESS, KEY
+
+# heroku
 ACCESS = os.environ['ACCESS']
 KEY = os.environ['KEY']
 
