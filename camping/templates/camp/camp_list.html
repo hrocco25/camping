@@ -5,6 +5,7 @@
 {% block content %}
 
 <div>
+  
 
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" >
         <div class="carousel-inner">
@@ -35,11 +36,9 @@
     </div>
     <div>
       {% for camp in camps %}
-      <div class="camps">
-        <a href="{% url 'camp_detail' pk=camp.pk %}"><h3>{{ camp.name }}-{{ camp.location}}</h3></a> 
-
-      </div>
-        
+        <div class="camps">
+          <a href="{% url 'camp_detail' pk=camp.pk %}"><h3>{{ camp.name }}-{{ camp.location}}</h3></a> 
+        </div> 
       {% endfor %}
     </div>
   
