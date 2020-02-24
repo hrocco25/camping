@@ -20,7 +20,7 @@
     <div class="reviews">
         <div class="reviewHeader">
             <h2>Reviews</h2> 
-            <h2><a href="{% url 'review_create' pk=camp.pk %}">Add a Review</a></h2>
+            <button><a href="{% url 'review_create' pk=camp.pk %}">Add a Review</a></button>
         </div>
         <ul>
             {% for review in camp.reviews.all %}

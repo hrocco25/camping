@@ -1,6 +1,11 @@
 body {
     background-color: #F7C2BA!important;
     margin: 5% !important;
+    font-family: 'Nunito' !important;
+}
+
+h1, h2{
+    font-weight: 700 !important;
 }
 
 .top{
@@ -36,7 +41,7 @@ a{
 
 .search a{
     font-size: 1.6em;
-    border: solid .1em black;
+    
 
 }
 
@@ -69,15 +74,12 @@ a{
 }
 
 .detailHead img{
-    width: 30%;
+    width: 40%;
     margin-bottom: 2%;
     border: black .1em solid;
 }
 
-.reviewHeader a{
-    border: black solid .1em;
-   
-}
+
 
 
 
