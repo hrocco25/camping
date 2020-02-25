@@ -120,7 +120,7 @@ class Camp(models.Model):
 **RESOLUTION**
   I created an AWS account with a bucket and user.  Attached my information to settings.py.  I have two different spots to score my secret key info one to use on heroku and one to use on localhost.  The one for heroku is in the config vars.  
 
-   ``
+   ```
     # local
     # from key import ACCESS, KEY
 
@@ -137,9 +137,7 @@ class Camp(models.Model):
     AWS_DEFAULT_ACL = None
 
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-
-  ``
+  ```
 
 ---
 
