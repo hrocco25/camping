@@ -4,7 +4,6 @@
 {% load crispy_forms_tags %}
  
     <h1>New Review</h1>
- 
     <form method="POST" novalidate>
         {% csrf_token %}
         <div class="col-lg">
@@ -21,8 +20,6 @@
                 
             </div>
             <button type="submit">Submit</button>
-        </div>
-       
-       
+        </div>      
     </form>
 {% endblock %}

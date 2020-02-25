@@ -16,7 +16,6 @@ def camp_detail(request, pk):
 
 def camp_create(request):
     if request.method == 'POST':
-        # add request.FILES to get images to show up
         form = CampForm(request.POST, request.FILES)
         if form.is_valid():
             camp = form.save()
@@ -42,8 +41,6 @@ def review_create(request, pk):
             review= form.save(commit=False)
             review.camp_id = pk
             review=form.save()
-            # review = form.save()
-            # camp = review.camp_id
             return redirect('camp_detail', pk=pk)
     else:
         form = ReviewForm()
