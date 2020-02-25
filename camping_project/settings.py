@@ -32,17 +32,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '419x+v9+=tl8!db8c&d8ap747yb2igv3^j4-dkt$xdrlisa3f='
 
 
-
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1',
 'dispersed-camping.herokuapp.com'
 ]
-
 
 # Application definition
 
@@ -97,24 +93,6 @@ WSGI_APPLICATION = 'camping_project.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'camping_db',
-#         'USER': 'camp',
-#         'PASSWORD': 'camppassword',
-#         'HOST': 'localhost'
-#     }
-# }
 
 DATABASES = {
     'default': {
@@ -125,8 +103,6 @@ DATABASES = {
         'HOST': 'ec2-3-231-46-238.compute-1.amazonaws.com'
     }
 }
-
-# postgres://kafumuczxehwvx:16b78aa1e41156f33a7a7006963d11d18d8d751b061dbdd3493c3e433b241d38@ec2-3-231-46-238.compute-1.amazonaws.com:5432/daf38uqqs898ja
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -159,14 +135,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-# ACCESS = False
-
-
-
-# if ENV_ROLE == "development": 
-
-   
 
 
 # Static files (CSS, JavaScript, Images)
