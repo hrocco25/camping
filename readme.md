@@ -69,13 +69,13 @@ The application has been deployed to Heroku.
 
 ## Technology
 
--Django
+- Django
 
 ## New Technologies
 
--Pillow
--AWS
--Bootstrap
+- Pillow
+- AWS
+- Bootstrap
 
 
 
@@ -84,7 +84,6 @@ The application has been deployed to Heroku.
 
 Created a second app in my project for search and I used django's Q lookup to search for certain criteria.
 ```
-
 def searchResult(request):
     camp=None
     query=None
@@ -92,6 +91,7 @@ def searchResult(request):
         query = request.GET.get("q")
         camps = Camp.objects.all().filter(Q(name__icontains=query)| Q(location__icontains=query) | Q(description__icontains=query)).distinct()
     return render(request, 'search.html',{"query": query,"camps":camps})
+```
 
 
 I used images in my model and used Pillow and AWS for the images to work on Heroku
