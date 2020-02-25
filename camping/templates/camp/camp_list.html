@@ -33,10 +33,10 @@
         </div> 
        
     </div>
-    <div>
+    <div class="campDetail">
       {% for camp in camps %}
         <div class="camps">
-          <a href="{% url 'camp_detail' pk=camp.pk %}"><h3>{{ camp.name }}-{{ camp.location}}</h3></a> 
+          <a href="{% url 'camp_detail' pk=camp.pk %}"><h4>{{ camp.name }}-{{ camp.location}}</h4></a> 
         </div> 
       {% endfor %}
     </div>

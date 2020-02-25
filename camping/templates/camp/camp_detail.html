@@ -2,19 +2,23 @@
 {% block content %}
 
 <div>
+    <div class="campName">
+       <h1>{{ camp.name }}</h1> 
+       <p>{{ camp.location }}</p>
+    </div>
+    
     <div class="detail">
         <div class="detailHead">
-            <h1>{{ camp.name }}</h1>
-            <p>Location: {{ camp.location }}</p>
             {% if camp.image %}
                 <img src="{{ camp.image.url }}" alt="{{ camp.name }}">
             {% endif %}
-        </div>
-        <div class="detailBody">
-            <p>{{ camp.description }} </p>
             <p>Number of days: {{ camp.number_of_days }}</p>
             <p>Number of camping spots: {{ camp.number_of_campsites }}</p>
             <p>Road condition: {{ camp.road }}</p>
+        </div>
+        <div class="detailBody">
+            <p>{{ camp.description }} </p>
+           
         </div>
     </div>
     <div class="reviews">
@@ -25,7 +29,7 @@
         <ul>
             {% for review in camp.reviews.all %}
                 <li> 
-                    <h3>{{ review.title }}</h3> 
+                    <h4>{{ review.title }}</h4> 
                     <p>{{ review.content }}- {{ review.author }}</p>
                 </li>
             {% endfor %}
