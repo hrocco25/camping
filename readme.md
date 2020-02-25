@@ -1,12 +1,16 @@
 # Project Overview
 
-Great-Reads
+Free Camping
 
 ## Project Description
 
 My project idea was to create a site where people can go to add free campsites and look for free campsites.  I created an app called Free Camping with Django.  You can go on the site and search for campsites, add campsites, and review campsites.  You can add images of the campsite as well.  
 
-The application has been deployed to Heroku
+The application has been deployed to Heroku.
+
+<img src="https://user-images.githubusercontent.com/49919405/75263541-5bd60c00-57ab-11ea-92a7-b606b7f7e042.png" height='200' width='200'>
+
+<img src="https://user-images.githubusercontent.com/49919405/75263595-727c6300-57ab-11ea-8d5a-1bdf73243eb9.png" height='200' width='200'>
 
 
 ## Project Links
@@ -18,8 +22,7 @@ The application has been deployed to Heroku
 
 ## Wireframes
 
-- [wire frame](https://github.com/viviRbi/Great-reads/blob/master/plan/pr3_main.png)
-
+<img src="https://user-images.githubusercontent.com/49919405/75263864-c7b87480-57ab-11ea-9b5a-e372dddcda78.jpg" height='200' width='200'>
 
 
 #### MVP
